@@ -52,8 +52,8 @@ Você precisará de um compilador C++ (como G++, Clang ou o compilador do Visual
 
     *No Windows:*
     ```bash
-    sistema_bancario.exe
-    ```
+    é necessario criar um executal do programa
+    g++ 'arquivo principal' 'arquivo que tem a classe ' -o 'nome do executal.exe'.
 
 ## 📈 Possíveis Melhorias Futuras
 
