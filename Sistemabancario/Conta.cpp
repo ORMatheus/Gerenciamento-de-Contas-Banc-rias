@@ -44,3 +44,8 @@ bool Conta::sacar(double valor){
     << std::fixed << std::setprecision(2) << getSaldo() << std::endl;
     return true;
 }
+
+
+double Conta::getSaldo()const {
+    return saldo;
+}
