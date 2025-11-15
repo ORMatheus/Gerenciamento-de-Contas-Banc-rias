@@ -21,7 +21,9 @@ void exibirMenu() {
     std::cout << "Escolha uma opção: ";
 }
 
-
+void limparBufferEntrada(){
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+}
 
 
 int main(){
