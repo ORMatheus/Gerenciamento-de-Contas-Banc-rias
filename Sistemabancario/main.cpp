@@ -33,6 +33,18 @@ Conta*encontrarConta(int numeroConta){
     }
     return nullptr;//caso não encontre
 }
+//criar conta
+void criarConta(){
+    int numero;
+    std::string nome;
+    double depositoInicial;
+
+    std::cout << "\n--- Criar Nova Conta ---"<< std::endl;
+    std::cout << "Digite o numero desejado para sua Conta:";
+    std::cin >> numero;
+
+    //logica de validação do numero fornecido 
+}
 
 
 int main(){
