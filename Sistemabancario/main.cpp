@@ -19,7 +19,7 @@ int main(){
     cout << "\n Criando Conta para 'Fernando ' (N.1001) Com deposito Inicial de R$ 500.00\n";
     Conta conta1(1001,"Fernando", 500.00);
     exibirDetalhes(conta1);
-
+    system("Pause");
     //teste 2
     return 0;
 }
