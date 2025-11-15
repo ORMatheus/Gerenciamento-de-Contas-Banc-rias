@@ -25,6 +25,15 @@ void limparBufferEntrada(){
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
 }
 
+Conta*encontrarConta(int numeroConta){
+    for(int i =0 ; i<contas.size(); i++){
+        if(contas[i].getNumeroConta()== numeroConta){
+            return &contas[i];
+        }
+    }
+    return nullptr;//caso não encontre
+}
+
 
 int main(){
     std::cout << "=== Bem-vindo ao Sistema Bancário (Teste de Classe) ===" << std::endl;
