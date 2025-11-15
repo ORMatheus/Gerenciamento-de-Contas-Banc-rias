@@ -19,7 +19,12 @@ int main(){
     cout << "\n Criando Conta para 'Fernando ' (N.1001) Com deposito Inicial de R$ 500.00\n";
     Conta conta1(1001,"Fernando", 500.00);
     exibirDetalhes(conta1);
-    system("Pause");
+
     //teste 2
+    std::cout << "\n[AÇÃO] Depositando R$ 250.50 na conta de Fernando...\n";
+    conta1.depositar(250.50);
+    exibirDetalhes(conta1); // Saldo esperado: R$ 750.50
+
+    system("Pause");
     return 0;
 }
