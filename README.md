@@ -55,6 +55,15 @@ Você precisará de um compilador C++ (como G++, Clang ou o compilador do Visual
     sistema_bancario.exe
     ```
 
-## 📂 Estrutura do Projeto (Sugestão)
+## 📈 Possíveis Melhorias Futuras
 
-Uma sugestão de estrutura de arquivos para manter o projeto organizado:
+* [ ] Implementar persistência de dados (salvar e carregar contas de um arquivo `.txt` ou `.csv`).
+* [ ] Adicionar herança (ex: `ContaCorrente` e `ContaPoupanca` com regras diferentes).
+* [ ] Melhorar o tratamento de erros e entradas inválidas do usuário.
+* [ ] Criar uma classe `Cliente` separada que pode ter *uma ou mais* `Contas`.
+
+## 📄 Licença
+
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo `LICENSE` para mais detalhes (se você adicionar um).
+
+---
