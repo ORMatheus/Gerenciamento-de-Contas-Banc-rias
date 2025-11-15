@@ -44,6 +44,20 @@ void criarConta(){
     std::cin >> numero;
 
     //logica de validação do numero fornecido 
+    if(std::cin.fail()){
+        std::cout << "Erro: número da conta invalida." << std::cout << endl;
+        std::cin.clear();//limpar o buffer do cin
+        limparBufferEntrada();
+        return;
+    }
+    //validação caso a conta ja exista
+    if(encontrarConta(numero) !=nullptr){ //caso a conta ja exista ele vai encontrar uma posição no vector de contas 
+        std::cout << "Erro:já Exsite uma conta com esse número ." << std:: endl;
+        limparBufferEntrada();
+        return;
+    }
+
+    
 }
 
 
