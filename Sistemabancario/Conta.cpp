@@ -49,3 +49,13 @@ bool Conta::sacar(double valor){
 double Conta::getSaldo()const {
     return saldo;
 }
+
+//metodo Getter de  consulta do nome do titular
+
+std::string Conta::getNomeTitular() const{
+    return nomeTitular;
+}
+
+int Conta::getNumeroConta() const {
+    return numeroConta;
+}
