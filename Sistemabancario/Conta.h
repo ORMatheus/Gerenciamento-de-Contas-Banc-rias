@@ -17,6 +17,6 @@ class Conta{
     double getSaldo()const;
     std::string getNomeTitular() const;
     int getNumeroConta() const ;
-
-
 };
+
+#endif
