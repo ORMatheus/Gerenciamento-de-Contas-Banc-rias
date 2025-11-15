@@ -5,7 +5,7 @@
 class Conta{    
     private:
     int numeroConta;
-    std::string NomeTitular;
+    std::string nomeTitular;
     double saldo;
 
     public:
