@@ -13,7 +13,10 @@ class Conta{
     void depositar(double valor);
     bool sacar(double valor);
 
-
+    //metodo getters
+    double getSaldo()const;
+    std::string getNomeTitular() const;
+    int getNumeroConta() const ;
 
 
 };
