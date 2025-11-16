@@ -168,7 +168,7 @@ int main(){
 
         //se a entrada não for um número
         if(std::cin.fail()){
-            std::cout << "Opção invalida. Por Favor , digite um novo numero:" << std::endl;
+            std::cout << "Opcao invalida. Por Favor , digite um novo numero:" << std::endl;
             std::cin.clear();// limpa o estado atual do cin 
             limparBufferEntrada(); //Limpa o buffer
             continue;
@@ -194,7 +194,7 @@ int main(){
                 std::cout << "Saindo do sistema... Obrigado!" << std::endl;
                 return 0; // Termina o programa
             default:
-                std::cout << "Opção inválida. Tente novamente." << std::endl;
+                std::cout << "Opcao invalida. Tente novamente." << std::endl;
         }
     }
 
