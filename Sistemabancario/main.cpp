@@ -70,6 +70,13 @@ void criarConta(){
         limparBufferEntrada();
         return;
     }
+
+    //criação do objeto Conta
+    Conta novaConta(numero,nome,depositoInicial){
+        contas.push_back(novaConta);    //adiciona o objeto nova conta ao final do vetor
+        std::cout << "\nConta nova para "<<nome << " '(N." << numero << ") Criada com Sucesso !!"std::endl;
+        
+    }
 }
 
 
