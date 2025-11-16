@@ -100,6 +100,27 @@ void fazerDeposito(){
     }
 }
 
+void fazerSaque(){
+    int numero;
+    double valor;
+    std::cout << "\nFazer Saque---";
+    std::cout << "Digite o número da sua conta:";
+    std::cin >>numero;
+    Conta* conta=encontrarConta(numero);
+    if(conta==nullptr){
+        std::cout<< "Erro:conta não encontrada." << std::endl;
+    }else {
+        std::cout << "Digite o valor a sacar :";
+        std::cin >> valor;
+        if(std::cin.fail()){
+            std::cout << "Erro:Valor digitado invalido.";
+            std::cin.clear();
+            limparBufferEntrada();
+        }else{
+            conta->sacar(valor);
+        }
+    }
+}
 
 int main(){
     std::cout << "=== Bem-vindo ao Sistema Bancário (Teste de Classe) ===" << std::endl;
