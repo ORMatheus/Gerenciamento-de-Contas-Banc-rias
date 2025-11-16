@@ -10,15 +10,15 @@
 std::vector<Conta> contas;
 
 void exibirMenu() {
-    std::cout << "\n--- Sistema de Gerenciamento Bancário ---" << std::endl;
+    std::cout << "\n--- Sistema de Gerenciamento Bancario ---" << std::endl;
     std::cout << "1. Criar nova conta" << std::endl;
-    std::cout << "2. Fazer depósito" << std::endl;
+    std::cout << "2. Fazer deposito" << std::endl;
     std::cout << "3. Fazer saque" << std::endl;
     std::cout << "4. Consultar saldo/detalhes" << std::endl;
     std::cout << "5. Listar todas as contas" << std::endl;
     std::cout << "0. Sair do sistema" << std::endl;
     std::cout << "-----------------------------------------" << std::endl;
-    std::cout << "Escolha uma opção: ";
+    std::cout << "Escolha uma opcao: ";
 }
 
 void limparBufferEntrada(){
@@ -61,7 +61,7 @@ void criarConta(){
     limparBufferEntrada() ; //limpar o enter deixado pelo cin anterior do >>numero
     std::getline(std::cin,nome);
 
-    std::cout << "Digite o depósito inicial (0 se não houver)";
+    std::cout << "Digite o deposito inicial (0 se não houver) :";
     std::cin >> depositoInicial;
 
     if(std::cin.fail()){
@@ -83,7 +83,7 @@ void criarConta(){
 void fazerDeposito(){
     int numero;
     double valor;
-    std::cout <<"\n--- Fazer Depósito ---"<< std::endl;
+    std::cout <<"\n--- Fazer Deposito ---"<< std::endl;
     std::cout << "Digite o número da conta:";
     std::cin >> numero;
     Conta*conta=encontrarConta(numero);
@@ -197,6 +197,8 @@ int main(){
                 std::cout << "Opção inválida. Tente novamente." << std::endl;
         }
     }
+
+    system("pause");
 
     return 0;
 }
