@@ -45,7 +45,7 @@ void criarConta(){
 
     //logica de validação do numero fornecido 
     if(std::cin.fail()){
-        std::cout << "Erro: número da conta invalida." << std::cout << endl;
+        std::cout << "Erro: número da conta invalida." <<std::endl;
         std::cin.clear();//limpar o buffer do cin
         limparBufferEntrada();
         return;
@@ -74,8 +74,7 @@ void criarConta(){
     //criação do objeto Conta
     Conta novaConta(numero,nome,depositoInicial){
         contas.push_back(novaConta);    //adiciona o objeto nova conta ao final do vetor
-        std::cout << "\nConta nova para "<<nome << " '(N." << numero << ") Criada com Sucesso !!"std::endl;
-
+        std::cout << "\nConta nova para "<<nome <<" '(N." << numero << ") Criada com Sucesso !!" << std::endl;
     }
 }
 
@@ -121,6 +120,7 @@ void fazerSaque(){
         }
     }
 }
+
 
 int main(){
     std::cout << "=== Bem-vindo ao Sistema Bancário (Teste de Classe) ===" << std::endl;
