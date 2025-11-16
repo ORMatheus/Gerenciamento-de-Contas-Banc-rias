@@ -74,7 +74,7 @@ void criarConta(){
     //criação do objeto Conta
     Conta novaConta(numero,nome,depositoInicial){
         contas.push_back(novaConta);    //adiciona o objeto nova conta ao final do vetor
-        std::cout << "\nConta nova para "<<nome <<" '(N." << numero << ") Criada com Sucesso !!" << std::endl;
+        std::cout << "\nConta nova para "<< nome <<" '(N." << numero << ") Criada com Sucesso !!" << std::endl;
     }
 }
 
@@ -118,6 +118,24 @@ void fazerSaque(){
         }else{
             conta->sacar(valor);
         }
+    }
+}
+
+void consultarSaldo(){
+   int numero;
+    std::cout << "\n--- Consultar Saldo ---" << std::endl;
+    std::cout << "Digite o número da conta: ";
+    std::cin >> numero;
+
+    Conta* conta=encontrarConta(numero);
+    if(conta==nullptr){
+        std::cout <<"Erro:Conta não encontrada." << std::endl;
+    }else{
+        std::cout << "\n--- Detalhes da conta ---"<<std::endl;
+        std::cout <<"Titular" <conta->getNomeTitular() << std::endl;
+        std::cout << "Conta N." << conta->getNumeroConta() << std::endl;
+        std::cout << "Saldo atual da conta:" << "R$" << std::fixed <<std::setprecision(2) << conta->getSaldo()<<std::endl;
+        std::cout << "-------------------------" << std::endl;
     }
 }
 
