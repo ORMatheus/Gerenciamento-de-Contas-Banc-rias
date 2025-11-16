@@ -140,7 +140,20 @@ void consultarSaldo(){
 }
 
 void listarTodasAsContas(){
-    
+    std::cout << "\n--- Lista com todas as contas ---" << std::endl;
+    if(contas.empty()){
+        std::cout << "Nenhuma conta cadastrada no sistema." << std::endl;
+        return ;
+    }
+
+    for (const Conta& conta : contas) {
+        std::cout << "-------------------------" << std::endl;
+        std::cout << "Titular: \t" << conta.getNomeTitular() << std::endl;
+        std::cout << "Conta N.: \t" << conta.getNumeroConta() << std::endl;
+        std::cout << "Saldo: \t\t" << "R$ " << std::fixed
+        << std::setprecision(2) << conta.getSaldo() << std::endl;
+    }
+    std::cout << "-------------------------" << std::endl;
 }
 
 
