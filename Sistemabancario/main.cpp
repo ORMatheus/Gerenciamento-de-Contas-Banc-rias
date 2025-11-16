@@ -57,7 +57,19 @@ void criarConta(){
         return;
     }
 
-    
+    std::cout << "Digite no nome do titular:";
+    limparBufferEntrada() ; //limpar o enter deixado pelo cin anterior do >>numero
+    std::getline(std::cin,nome);
+
+    std::cout << "Digite o depósito inicial (0 se não houver)";
+    std::cin >> depositoInicial;
+
+    if(std::cin.fail()){
+        std::cout << "Erro:Valor de déposito invalido ." <<std::endl;
+        std::cin.clear();
+        limparBufferEntrada();
+        return;
+    }
 }
 
 
