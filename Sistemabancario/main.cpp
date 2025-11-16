@@ -75,7 +75,28 @@ void criarConta(){
     Conta novaConta(numero,nome,depositoInicial){
         contas.push_back(novaConta);    //adiciona o objeto nova conta ao final do vetor
         std::cout << "\nConta nova para "<<nome << " '(N." << numero << ") Criada com Sucesso !!"std::endl;
-        
+
+    }
+}
+
+void fazerDeposito(){
+    int numero;
+    double valor;
+    std::cout <<"\n--- Fazer Depósito ---"<< std::endl;
+    std::cout << "Digite o número da conta:";
+    std::cin >> numero;
+    Conta*conta=encontrarConta(numero);
+    if(conta==nullptr){
+        std::cout << "Erro:Conta não encontrada." <<std::endl;
+    }else {
+        std::cout << "Valor a ser depositado:"<< valor;
+        if(std::cin.fail()){
+            std::cout << "Erro:Valor digitado invalido.";
+            std::cin.clear();
+            limparBufferEntrada();
+        }else{
+            conta->depositar(valor);
+        }
     }
 }
 
