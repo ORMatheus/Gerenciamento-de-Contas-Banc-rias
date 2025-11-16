@@ -139,6 +139,10 @@ void consultarSaldo(){
     }
 }
 
+void listarTodasAsContas(){
+    
+}
+
 
 int main(){
     std::cout << "=== Bem-vindo ao Sistema Bancário (Teste de Classe) ===" << std::endl;
