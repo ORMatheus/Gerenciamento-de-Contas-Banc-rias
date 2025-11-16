@@ -72,10 +72,12 @@ void criarConta(){
     }
 
     //criação do objeto Conta
-    Conta novaConta(numero,nome,depositoInicial){
-        contas.push_back(novaConta);    //adiciona o objeto nova conta ao final do vetor
-        std::cout << "\nConta nova para "<< nome <<" '(N." << numero << ") Criada com Sucesso !!" << std::endl;
-    }
+    Conta novaConta(numero, nome, depositoInicial);
+    // Adiciona o objeto ao nosso vetor
+    contas.push_back(novaConta);
+
+    std::cout << "\nConta para '" << nome << "' (N. " << numero
+              << ") criada com sucesso!" << std::endl;
 }
 
 void fazerDeposito(){
@@ -132,7 +134,7 @@ void consultarSaldo(){
         std::cout <<"Erro:Conta não encontrada." << std::endl;
     }else{
         std::cout << "\n--- Detalhes da conta ---"<<std::endl;
-        std::cout <<"Titular" <conta->getNomeTitular() << std::endl;
+        std::cout <<"Titular" <<conta->getNomeTitular()<<std::endl;
         std::cout << "Conta N." << conta->getNumeroConta() << std::endl;
         std::cout << "Saldo atual da conta:" << "R$" << std::fixed <<std::setprecision(2) << conta->getSaldo()<<std::endl;
         std::cout << "-------------------------" << std::endl;
@@ -158,7 +160,43 @@ void listarTodasAsContas(){
 
 
 int main(){
-    std::cout << "=== Bem-vindo ao Sistema Bancário (Teste de Classe) ===" << std::endl;
+    int opcao;
+
+    while(true){
+        exibirMenu();
+        std::cin >>opcao;
+
+        //se a entrada não for um número
+        if(std::cin.fail()){
+            std::cout << "Opção invalida. Por Favor , digite um novo numero:" << std::endl;
+            std::cin.clear();// limpa o estado atual do cin 
+            limparBufferEntrada(); //Limpa o buffer
+            continue;
+        }
+
+     switch (opcao) {
+            case 1:
+                criarConta();
+                break;
+            case 2:
+                fazerDeposito();
+                break;
+            case 3:
+                fazerSaque();
+                break;
+            case 4:
+                consultarSaldo();
+                break;
+            case 5:
+                listarTodasAsContas();
+                break;
+            case 0:
+                std::cout << "Saindo do sistema... Obrigado!" << std::endl;
+                return 0; // Termina o programa
+            default:
+                std::cout << "Opção inválida. Tente novamente." << std::endl;
+        }
+    }
 
     return 0;
 }
